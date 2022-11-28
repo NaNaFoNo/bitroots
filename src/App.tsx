@@ -11,9 +11,12 @@ import {
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
+    <Navbar />
     <Box textAlign="center" fontSize="xl">
       <Grid minH="100vh" p={3}>
         <ColorModeSwitcher justifySelf="flex-end" />
@@ -34,5 +37,6 @@ export const App = () => (
         </VStack>
       </Grid>
     </Box>
+    <Footer />
   </ChakraProvider>
 )
